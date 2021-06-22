@@ -24,8 +24,6 @@ Usable API(postman): http://openlibrary.org/search.json?q=
 
 Usable API (backup): https://api.itbook.store/1.0/search/ 
 
-
-<h3>open library</h3>
 ```
 {
     "numFound": 0,
@@ -34,15 +32,13 @@ Usable API (backup): https://api.itbook.store/1.0/search/
     "docs": [],
     "num_found": 0
 }
-
-<h3> it book </h3>
-
+//it-books
 {
     "error": "0",
     "total": "0",
     "books": []
 }
-
+```
 
 
 This is the results of a search query with no input from postman. If the user adds any word or the full title of the book it will turn up an array of the search results.
