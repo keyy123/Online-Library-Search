@@ -57,7 +57,10 @@ This is the results of a search query with no input from postman. If the user ad
 Wireframes
 ----------
 
+[![KDP-Wireframe-MVP-Concept.png](https://i.postimg.cc/3xPDXh0k/KDP-Wireframe-MVP-Concept.png)](https://postimg.cc/FYVRv2Zv)
+
 [![Wireframe-Online-Library.png](https://i.postimg.cc/P5NmthLN/Wireframe-Online-Library.png)](https://postimg.cc/rDXdJBNL)
+
 
 
 
