@@ -35,9 +35,19 @@ Usable API (backup): https://api.itbook.store/1.0/search/
 }
 //it-books
 {
+    {
     "error": "0",
-    "total": "0",
-    "books": []
+    "total": "439",
+    "page": "1",
+    "books": [
+        {
+            "title": "Head First HTML with CSS & XHTML",
+            "subtitle": "A Learner's Companion to HTML, CSS, and XHTML",
+            "isbn13": "9780596101978",
+            "price": "$4.21",
+            "image": "https://itbook.store/img/books/9780596101978.png",
+            "url": "https://itbook.store/books/9780596101978"
+        }
 }
 ```
 
