@@ -115,8 +115,6 @@ Add Voice Recognition | H | 5 HRS | 0HRS | 0HRs
 Add Animations | M | 5 HRS | 0HRS | 0HRS
 Debugging | H | 10 HRS | 0 HRS | 0HRS
 Presentation Rehearsal | H | 4 HRS | 0HRS | 0HRS
-
-
 Total | H | 42 hrs | 5hrs | 6hrs+
 
 Code Snippet
