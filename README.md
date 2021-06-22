@@ -33,10 +33,9 @@ Usable API (backup): https://api.itbook.store/1.0/search/
     "docs": [],
     "num_found": 0
 }
-```
 
 <h3> it book </h3>
-```
+
 {
     "error": "0",
     "total": "0",
