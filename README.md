@@ -11,7 +11,8 @@ https://git.generalassemb.ly/parktwins1/Online-Library-Search
 Project Description
 -------------------
 
-It is a online library search of the online library site using it's API to help users find books that they would like to read.
+It is a online library search of the online library site using it's API to help users find books that they would like to read. In addition to this, It will append the search
+results to the HTML objects that will represent books and upon clicking on them they should open or show cover with the book details. 
 
 
 API and Data Sample
