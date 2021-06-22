@@ -43,7 +43,7 @@ Usable API (backup): https://api.itbook.store/1.0/search/
     "books": []
 }
 
-```
+
 
 This is the results of a search query with no input from postman. If the user adds any word or the full title of the book it will turn up an array of the search results.
 
