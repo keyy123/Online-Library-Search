@@ -103,17 +103,21 @@ Timeframes
 
 Component | Priority | Estimated Time | Time Invested | Actual Time
 ----------|----------|----------------|---------------|-------------
-HTML MockUp & API links | M | 3 HRS | 1HRS | 1HRS
-Basic JS Functionality| H | 4HRS | 0HRS | 0HRS
-JS Event Listeners | H | 4 HRS | 0 HRS | 0HRS
-Add Voice Recognition | M | 5 HRS | 0HRS | 0HRs
-CSS Mockup | M | 5 HRS | 0HRS | 0HRS
-Add Animations | L | 5 HRS | 0HRS | 0HRS
+Create/Edit README.md | H | 3 HRS | 5HRS | 6HRS+
+Create 3 Docs (html,css,js)| H | 1HRS | 0HRS | 0HRS
+Create HTML Boilerplate&Elements| H | 1 HRS | 0 HRS | 0HRS
+Link AxiosCDN & API | H | 1HRS | 0HRS | 0HRS
+Prepare Global Variables (JS)| H | 1 HRS | 0HRS | 0HRS
+Add JS Functions | M | 3HRS | 0HRS | 0HRS
+Add JS Event Listeners | H | 3 HRS | 0 HRS | 0HRS
+Add CSS Mockup: Flexbox & Media Queries @ breakpoint | M | 5 HRS | 0HRS | 0HRS
+Add Voice Recognition | H | 5 HRS | 0HRS | 0HRs
+Add Animations | M | 5 HRS | 0HRS | 0HRS
 Debugging | H | 10 HRS | 0 HRS | 0HRS
 Presentation Rehearsal | H | 4 HRS | 0HRS | 0HRS
 
 
-Total | H | 40 hrs | 5hrs | 5hrs
+Total | H | 42 hrs | 5hrs | 6hrs+
 
 Code Snippet
 ------------
