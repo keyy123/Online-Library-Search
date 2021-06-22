@@ -26,7 +26,8 @@ Usable API (backup): https://api.itbook.store/1.0/search/
 
 
 <h3>open library</h3>
-```{
+```
+{
     "numFound": 0,
     "start": 0,
     "numFoundExact": true,
@@ -41,6 +42,7 @@ Usable API (backup): https://api.itbook.store/1.0/search/
     "total": "0",
     "books": []
 }
+
 ```
 
 This is the results of a search query with no input from postman. If the user adds any word or the full title of the book it will turn up an array of the search results.
