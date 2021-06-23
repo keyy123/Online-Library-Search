@@ -39,22 +39,20 @@ div.book.cover{
   position: relative;
 }
 
- p.bkContent{
-  width: 115px;
-  position: absolute;
+p.bookContent{
+
   display: flex;
-  height: 100px;
-  padding-right: 0px;
-  padding-left: 0px;
-  bottom: 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  top: 49px;
-  left: 28.427;
-  right: 27px;
-  flex-direction: row;
-  justify-content: space-evenly;
+flex-direction: column;
+justify-content: space-around;
+left: auto;
+right: auto;
+bottom: 0px;
+height: 150px;
+width: 132px;
+margin-left: 0px;
+margin-right: 0px;
+align-items: center;
+
 } 
 
 p{
@@ -62,16 +60,24 @@ p{
   top: 0;
   right: 118.427;
   color: rgba(255,255,255, 1);
-  background:linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.4));
-  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
   margin: auto;
   font-size:xx-small;
 }
 
-.class1{
-opacity:1;
-} 
+div.book{
+  position: relative;
+}
 
-.class2{
-  opacity: 0;
+#myBtn{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.modal{
+
+}
+
+.modal-content{
+  
 }
