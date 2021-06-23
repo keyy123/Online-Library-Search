@@ -20,9 +20,9 @@ text.addEventListener('click', storeText)
 async function getBooks(input) {
   try {
     const response = await axios.get(`http://openlibrary.org/search.json?q=${input}`) 
-    console.log(response)
+    let bookInfo = response.data.docs  
 //Goal here is to add multiple [key, value] pairs onto on 1 html object
-   makeBooks(response.data.books)
+   makeBooks(bookInfo.slice(0,20))
     
   } catch (error) {
    console.error(error) 
@@ -45,7 +45,7 @@ function makeBooks(bookData) {
     let bookContent = document.createElement('p')
     bookContent.className = "bkContent class1"
     bookContent.textContent =
-    `Book Title:${element.title}, Subheading: ${element.subtitle}`
+    `Book Title:${element.title} Author: ${element.author_name} Publisher: ${element.publisher}`
     books.append(newBook)
     
     //Image Appending Features (can split into another function to improve aesthetic of code)
@@ -53,7 +53,7 @@ function makeBooks(bookData) {
     imgDiv.className = "book cover"
     let newImg = document.createElement('img')
     newImg.className = "book image"
-    newImg.setAttribute('src', element.image)
+    newImg.setAttribute('src', 'https://1.bp.blogspot.com/-07BtMPlJimo/T2ugvQamV_I/AAAAAAAAKlA/YeBLJcJ5gQU/s1600/booktemplate-generic.png')
     imgDiv.append(newImg)
     bookContainer.append(imgDiv)
     imgDiv.append(bookContent)
