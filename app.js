@@ -41,7 +41,7 @@ function makeBooks(bookData) {
     bookContainer.className = "container"
     newBook.append(bookContainer)
     let bookContent = document.createElement('p')
-    bookContent.className = "book content"
+    bookContent.className = "bkContent show-description"
     bookContent.textContent =
     `Book Title:${element.title}, Subheading: ${element.subtitle}`
     books.append(newBook)
@@ -56,3 +56,14 @@ function makeBooks(bookData) {
   });
 }
 
+
+function toggleContent() {
+  let showText = document.querySelector('.book');
+  showText.style.display === "none" ? showText.style.display = "block" : showText.style.display = "none";
+}
+
+books.addEventListener('click',toggleContent())
+
+
+//https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+//dash.generalassemb.ly - lesson 3 

@@ -32,14 +32,41 @@ img.book.image {
 }
 
 div.book.cover{
-  display: flex;
+  
   flex-wrap: wrap;
   flex-direction: column;
   align-content: flex-end;
+  position: relative;
 }
 
-p.book.content{
-  width: 10px;
-  height: 20px;
-  display: flex;
+ p.bkContent{
+  width: 115px;
+  height: 100px;
+  padding-right: 0px;
+  padding-left: 0px;
+  bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  top: 49px;
+  left: 28.427;
+  right: 27px;
+} 
+
+p{
+  position: absolute;
+  top: 0;
+  right: 118.427;
+  color: rgba(255,255,255, 1);
+  background:linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  margin: auto;
+  font-size:xx-small;
 }
+.bkContent > p{
+  opacity: 0;
+}
+
+.show-description{
+opacity:1;
+} 
