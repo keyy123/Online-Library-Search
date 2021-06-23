@@ -43,7 +43,7 @@ function makeBooks(bookData) {
     let bookContent = document.createElement('p')
     bookContent.className = "book content"
     bookContent.textContent =
-    `Book Title:${element.title}, Subheading: ${element.subtitle}, Image: ${element.image}`
+    `Book Title:${element.title}, Subheading: ${element.subtitle}`
     books.append(newBook)
     let imgDiv = document.createElement('div')
     imgDiv.className = "book cover"
