@@ -63,10 +63,11 @@ p{
   margin: auto;
   font-size:xx-small;
 }
-.bkContent > p{
-  opacity: 0;
-}
 
-.show-description{
+.class1{
 opacity:1;
 } 
+
+.class2{
+  opacity: 0;
+}
