@@ -4,17 +4,22 @@ const text = document.querySelector('#search')
 let h2 = document.querySelector('h2')
 const searchResults = []
 const books = document.querySelector('.book-list')
-
+const SpeechRecognition = window.webkitSpeechRecognition
 
 function storeText() {
   let words = input.value
-  let searchQuery = words.split('').join('+')
+  //let newArr = []
+  //newArr.push(words.split(' ').join('+')) -> This return all words with a + after each word = perfect!
+  //console.log(newArr)
+  let searchQuery = words.split(' ').join('+')
+  //let searchQuery = words.map().join('+')
   //source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
   //source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
   //source: https://masteringjs.io/tutorials/fundamentals/string-concat - this gave me the idea to check MDN for examples
   console.log(searchQuery)
-  getBooks(words)
+ // getBooks(words)
   //return input
+  getBooks(searchQuery)
 }
 
 text.addEventListener('click', storeText)
@@ -124,16 +129,21 @@ function makeBooks(bookData) {
 
 
 // Speech Recognition Functionality
-const SpeechRecognition = webkitSpeechRecognition
-const SpeechGrammarList = webkitSpeechGrammarList
-const SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+const SpeechGrammarList = window.SpeechGrammarList||window.webkitSpeechGrammarList
+const SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent
 
-
+//source: https://www.youtube.com/watch?v=rwB6RqqCmXc
+//
+//
+//
+//
 
 let grammar = '#JSGF V1.0;'
 const Recognition = new SpeechRecognition();
 Recognition.lang = 'en-US';
-Recognition.interimResults = 'false';
+Recognition.interimResults = false;
+Recognition.continuous = false;
+Recognition.maxAlternatives = 1;
 // const SpeechRecognitionGrammarList = new SpeechGrammarList();
 // SpeechRecognitionGrammarList.addFromString(grammar, 1);
 // Recognition.grammars = SpeechRecognitionGrammarList;
@@ -145,8 +155,12 @@ Recognition.interimResults = 'false';
 ///
 
 Recognition.onresult = (event) => {
+  
   const lastWord = event.results.length - 1;
-  const voiceCmd = event.results[lastWord][0].transcript 
+  const voiceCmd = event.results[lastWord][0].transcript
+  console.log(voiceCmd)
+  //console.log(event.results)
+  storeText(voiceCmd)
 }
 
 Recognition.onspeechend = () => {
