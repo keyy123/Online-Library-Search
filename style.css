@@ -81,7 +81,17 @@ div.search-area{
     bottom: 0px;
     top: 221px;
     left: 36px;
-
+    background-color:salmon;
+    color:rgba(255,255,255, 1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    width: 40%;
+    height: 10%;
+    justify-content: center;
   
 }
 
@@ -94,7 +104,7 @@ border-right-width: 0px;
 border-top-width: 0px;
 border-bottom-width: 0px;
 border-left-width: 0px;
-width: 25%;
+width: 10%;
 height: 35px;
 }
 
@@ -118,14 +128,31 @@ footer{
   transition: opacity 5s;
   background-color: rgba(0,0,0,0.5);
   width: 100%;
-  height: 3%;
   color:rgba(255,255,255, 1);
   text-align: center;
 }
 
+ i.fas.fa-microphone{
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  right: 483.5;
+  left: 510.5;
+  top: 81.438;
+  width: 16px;
+  height: 20px;
+} 
+
 /*Media Query - Breakpoint:Galaxy Fold (280 x 653) */
-@media only screen and (max-width:280px) {
+@media screen and (max-width:280px) {
 /*https://www.bing.com/videos/search?q=how+to+add+background+patterns+in+CSS&view=detail&mid=82112F7F3CE74A32A75782112F7F3CE74A32A757&FORM=VIRE*/
+/*code artist*/
 body{
 position: relative;
 background-color: #1f344c;
@@ -163,4 +190,5 @@ width: 90%vw;
 input#blank{
   width:100%vw;
 }
+
 }

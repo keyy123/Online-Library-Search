@@ -6,8 +6,6 @@ const searchResults = []
 const books = document.querySelector('.book-list')
 
 
-
-
 function storeText() {
   let words = input.value
   let searchQuery = words.split('').join('+')
@@ -123,3 +121,42 @@ function makeBooks(bookData) {
 //https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
 //dash.generalassemb.ly - lesson 3 
 //https://www.youtube.com/watch?v=degwrcZeGF0
+
+
+// Speech Recognition Functionality
+const SpeechRecognition = webkitSpeechRecognition
+const SpeechGrammarList = webkitSpeechGrammarList
+const SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+
+
+
+let grammar = '#JSGF V1.0;'
+const Recognition = new SpeechRecognition();
+Recognition.lang = 'en-US';
+Recognition.interimResults = 'false';
+// const SpeechRecognitionGrammarList = new SpeechGrammarList();
+// SpeechRecognitionGrammarList.addFromString(grammar, 1);
+// Recognition.grammars = SpeechRecognitionGrammarList;
+
+
+///
+
+
+///
+
+Recognition.onresult = (event) => {
+  const lastWord = event.results.length - 1;
+  const voiceCmd = event.results[lastWord][0].transcript 
+}
+
+Recognition.onspeechend = () => {
+  Recognition.stop()
+}
+
+Recognition.onerror = (error) => {
+  console.error(`Speech Recog Error:${error}`)
+}
+
+document.querySelector('i').addEventListener('click', () => {
+  Recognition.start();
+})
