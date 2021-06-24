@@ -160,7 +160,7 @@ Recognition.onresult = (event) => {
   const voiceCmd = event.results[lastWord][0].transcript
   console.log(voiceCmd)
   //console.log(event.results)
-  storeText(voiceCmd)
+  getBooks(voiceCmd)
 }
 
 Recognition.onspeechend = () => {
