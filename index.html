@@ -6,31 +6,35 @@
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/156ba70308.js" crossorigin="anonymous"></script>
   <!-- I recommend the fontAwesome free plan icons to add to websites -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
   <!-- I used the jQuery Content Delivery Network URL from w3schools -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="./app.js"></script>
   <title>Online Library</title>
 </head>
 <body>
-  <h1>IT Book Store</h1>
-  <div class="search-area">
-    <input type="text" id="blank">
-    <i class="fas fa-microphone"></i>
-    <button id="search">search</button>
+
+    <div class = "box center"> 
+    <h1>Book Search</h1>
+    <img class = "site-image" src ="https://th.bing.com/th/id/OIP.3th3kLGvdI3W6ffyVmyzhwHaCi?w=334&h=120&c=7&o=5&pid=1.7">
+    </div>
     
+    <div class="search-area">
+      <div class ="search-bar">
+    <input type="text" id="blank" placeholder="search here" >
+    <button id="search">search</button>
+    <button class = "voiceBtn"><i class="fas fa-microphone"></i></button>
+    <h2>Book results</h2>
+    </div>
 
 
-
-  </div>
-  <h2>Book results</h2>
   <section class="book-list">
-    <!-- Make an HTML/CSS Book Shelf -->
+    <!-- Make an HTML/CSS Book Shelf
     <div class ="top shelf"></div>
     <div class ="right shelf"></div>
     <div class ="mid shelf"></div>
     <div class ="left shelf"></div>
-    <div class ="bottom shelf"></div>
+    <div class ="bottom shelf"></div> -->
   </section>
 </body>
 <footer>&copy;Copyright All Rights Reserved - 2021 GA SEI Penguin Cohort</footer>

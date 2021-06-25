@@ -1,3 +1,10 @@
+body{
+position: relative;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-content: center;
+}
 
 h1{
   display: flex;
@@ -70,11 +77,29 @@ div.book{
 }
 
 div.search-area{
-  width: 100%;
-  height:35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 500px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-#myBtn{
+div.search-bar{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+div.microphone-search-btn{
+  display: flex;
+  flex-flow: row nowrap;
+}
+/* #myBtn{
   display: flex;
   flex-direction: column;
   position: relative;
@@ -93,7 +118,7 @@ div.search-area{
     height: 10%;
     justify-content: center;
   
-}
+} */
 
 button#search{
 background-color:salmon;
@@ -104,8 +129,8 @@ border-right-width: 0px;
 border-top-width: 0px;
 border-bottom-width: 0px;
 border-left-width: 0px;
-width: 10%;
-height: 35px;
+width: 20%;
+height: 35px;;
 }
 
 
@@ -125,7 +150,6 @@ body{
 footer{
   position: absolute;
   bottom: 0;
-  transition: opacity 5s;
   background-color: rgba(0,0,0,0.5);
   width: 100%;
   color:rgba(255,255,255, 1);
@@ -134,21 +158,57 @@ footer{
 
  i.fas.fa-microphone{
   -webkit-font-smoothing: antialiased;
-  display: inline-block;
+  display: flex;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
-  position: absolute;
+  /*position: absolute;*/
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  right: 483.5;
-  left: 510.5;
-  top: 81.438;
-  width: 16px;
-  height: 20px;
+  color: rgba(255,255,255, 1);
+  -webkit-font-smoothing: antialiased;
+  /* display: inline-block; */
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  /* position: absolute; */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  /* bottom: 240.562;
+  top: 199.438;
+  right: 498.5;
+  left: 485.5; */
+  width: 30px;
+  height: 40px;
+  color:red;
 } 
 
+div.box.center{
+  display: flex;
+  flex-direction: row;
+  height: 15%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+img.site-image{
+  border-radius: 50%;
+  width: 25%;
+  height:25%;
+  border: 5px groove cadetblue
+}
+
+input#blank{
+  height: 35px;
+
+}
+
+button.voiceBtn{
+  height: 35px;
+}
 /*Media Query - Breakpoint:Galaxy Fold (280 x 653) */
 @media screen and (max-width:280px) {
 /*https://www.bing.com/videos/search?q=how+to+add+background+patterns+in+CSS&view=detail&mid=82112F7F3CE74A32A75782112F7F3CE74A32A757&FORM=VIRE*/
@@ -167,14 +227,20 @@ color: white;
 
 div.search-area{
   display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-start;
-  
+  position: relative;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 500px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto; 
 }
  
 footer{
-  position: absolute;
+  position: sticky;
+  position: -webkit-sticky;
   font-size: small;
   width: 100%;
   height: 40px;
@@ -182,31 +248,8 @@ footer{
   bottom: 0;
 }
 
-div.search-area{
-  justify-content: center;
-width: 90%vw;
-}
-
 input#blank{
-  width:100%vw;
+  width:75%vw;
 }
-
-}
-
-/* CSS Library Section  */
-
-div.shelf{
-  display: flex;
-  flex-direction: column;
-  height: 25px;
-  margin: 16px 0px;
-  width: 75%;
-  background: rgb(150, 32, 32);
-}
-
-div.right.shelf{
-  position: absolute;
-  right: 0;
-  transform:rotate(90deg);
 
 }
