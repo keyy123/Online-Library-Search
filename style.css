@@ -112,8 +112,11 @@ div.search-area{
 
 div.search-bar{
   
+  position: sticky;
   flex-flow: row wrap;
   justify-content: center;
+  display: flex;
+  min-height: auto;
 }
 
 div.microphone-search-btn{
