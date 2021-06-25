@@ -1,45 +1,55 @@
+*{
+
+}
+
 body{
-position: relative;
 display: flex;
+position: relative;
 flex-direction: column;
 flex-wrap: wrap;
 align-content: center;
+background-image: url("https://th.bing.com/th/id/OIP.3th3kLGvdI3W6ffyVmyzhwHaCi?w=334&h=120&c=7&o=5&pid=1.7");
+background-size: cover;
 }
 
 h1{
-  display: flex;
+  
   justify-content: center;
   height: 50px;
-
+  order: 0;
 }
 
 section.book-list{
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  background-color: white;
   justify-content: center;
+  
 }
 
 div.search-area{
-  display: flex;
+  
   justify-content: center;
 }
 
 
 h2{
-  display: flex;
+  
   flex-direction: column;
   align-items: center;
+  order:5;
 }
 
 img.book.image {
-  display: flex;
+  
   flex-flow: row wrap;
   width: 15%vw;
   height: 200px;
 }
 
 div.book.cover{
-  
+  display: flex;
+  flex-wrap: row wrap;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: flex-end;
@@ -48,10 +58,10 @@ div.book.cover{
 
 p.bookContent{
 
-  display: flex;
-flex-direction: column;
+/* display: flex;
+flex-flow: row wrap; */
 justify-content: space-around;
-left: auto;
+left: 53px;
 right: auto;
 bottom: 0px;
 height: 150px;
@@ -77,7 +87,7 @@ div.book{
 }
 
 div.search-area{
-  display: flex;
+  
   flex-wrap: wrap;
   align-content: center;
   width: 500px;
@@ -90,17 +100,17 @@ div.search-area{
 }
 
 div.search-bar{
-  display: flex;
+  
   flex-flow: row wrap;
   justify-content: center;
 }
 
 div.microphone-search-btn{
-  display: flex;
+  
   flex-flow: row nowrap;
 }
 /* #myBtn{
-  display: flex;
+  
   flex-direction: column;
   position: relative;
     bottom: 0px;
@@ -130,7 +140,8 @@ border-top-width: 0px;
 border-bottom-width: 0px;
 border-left-width: 0px;
 width: 20%;
-height: 35px;;
+height: 35px;
+order: 1;
 }
 
 
@@ -158,7 +169,7 @@ footer{
 
  i.fas.fa-microphone{
   -webkit-font-smoothing: antialiased;
-  display: flex;
+  
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -186,7 +197,7 @@ footer{
 } 
 
 div.box.center{
-  display: flex;
+  
   flex-direction: row;
   height: 15%;
   flex-wrap: wrap;
@@ -194,20 +205,23 @@ div.box.center{
   align-items: center;
 }
 
-img.site-image{
+/* img.site-image{
+  
   border-radius: 50%;
   width: 25%;
   height:25%;
   border: 5px groove cadetblue
-}
+} */
 
 input#blank{
   height: 35px;
+  order:0;
 
 }
 
 button.voiceBtn{
   height: 35px;
+  order: 1;
 }
 /*Media Query - Breakpoint:Galaxy Fold (280 x 653) */
 @media screen and (max-width:280px) {
@@ -226,7 +240,7 @@ color: white;
 }
 
 div.search-area{
-  display: flex;
+  
   position: relative;
   justify-content: center;
   flex-direction: row;
@@ -252,4 +266,42 @@ input#blank{
   width:75%vw;
 }
 
+}
+
+/*Flip Card Animation from w3school 
+source: https://www.w3schools.com/howto/howto_css_flip_card.asp*/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /*This sets the card to a 3d perspective - the px are the intensity of the 3d appearance*/
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-inner{ /*This makes sure that both sides are in the same spot when flipped*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  /* what ever is in front is visible while back side is hidden */
+}
+
+.flip-card-back{
+  background: darkcyan;
+  color: white;
+  transform: rotateY(180deg);
 }

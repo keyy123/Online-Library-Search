@@ -29,7 +29,7 @@ async function getBooks(input) {
   try {
     const response = await axios.get(`http://openlibrary.org/search.json?q=${input}`) 
     let bookInfo = response.data.docs  
-    makeBooks(bookInfo.slice(0, 20))
+    makeBooks(bookInfo.slice(0, 6))
     //Source: Molly Exten - slack - sorting function 
   } catch (error) {
    console.error(error) 
@@ -41,7 +41,7 @@ function makeBooks(bookData) {
   
   bookData.forEach(element => {
 
-    //Book Appending Features for text and innerText cintent
+   // Book Appending Features for text and innerText cintent
     let newBook = document.createElement('div')
     newBook.className = "book"
     let bookContainer = document.createElement('div')
@@ -74,7 +74,6 @@ function makeBooks(bookData) {
     let newImg = document.createElement('img')
     newImg.className = "book image"
     newImg.setAttribute('src', 'https://1.bp.blogspot.com/-07BtMPlJimo/T2ugvQamV_I/AAAAAAAAKlA/YeBLJcJ5gQU/s1600/booktemplate-generic.png')
-
     //imgDiv.append(newImg)
     newBook.append(newImg)
     imgDiv.append(modalSpan)
