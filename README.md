@@ -100,11 +100,11 @@ Project Schedule
 
 Day   |	Deliverable   |	Status
 --------|----------------------------------------------------|---------------
-June 21 | Complete Read.md, Wireframes, Priority Matrix | Incomplete
-June 22 | Project Approval, PsuedoCode, HTML Boilerplate and cross links, test API|Incomplete
-June 23 | Add JS Functionality, Event Listeners, 1 Media query, CSS Flexbox/Grid Styling |Incomplete
-June 24 | MVP |Incomplete
-June 25 | Adv CSS/JS Styling and postMVP | Incomplete
+June 21 | Complete Read.md, Wireframes, Priority Matrix | Complete
+June 22 | Project Approval, PsuedoCode, HTML Boilerplate and cross links, test API|Complete
+June 23 | Add JS Functionality, Event Listeners, 1 Media query, CSS Flexbox/Grid Styling |Complete
+June 24 | MVP |Complete
+June 25 | postMVP - voice recognition, CSS/JS Styling and Animations | Incomplete
 June 28 | Presentations|Incomplete
 
 
@@ -121,24 +121,35 @@ Component | Priority | Estimated Time | Time Invested | Actual Time
 Create/Edit README.md | H | 3 HRS | 5HRS | 6HRS+
 Create 3 Docs (html,css,js)| H | 1HRS | 0HRS | 0HRS
 Create HTML Boilerplate&Elements| H | 1 HRS | 0 HRS | 0HRS
-Link AxiosCDN & API | H | 1HRS | 0HRS | 0HRS
+Link AxiosCDN & API | H | 1HRS | 7HRS | 7HRS
 Prepare Global Variables (JS)| H | 1 HRS | 0HRS | 0HRS
-Add JS Functions | M | 3HRS | 0HRS | 0HRS
-Add JS Event Listeners | H | 3 HRS | 0 HRS | 0HRS
-Add CSS Mockup: Flexbox & Media Queries @ breakpoint | M | 5 HRS | 0HRS | 0HRS
-Add Voice Recognition | H | 5 HRS | 0HRS | 0HRs
+Add JS Functions | M | 3HRS | 10HRS | 10HRS
+Add JS Event Listeners | H | 3 HRS | 2 HRS | 2HRS
+Add CSS Mockup: Flexbox & Media Queries @ breakpoint | M | 5 HRS | 6HRS | 6HRS
+Add Voice Recognition | H | 5 HRS | 9HRS | 9HRs
 Add Animations | M | 5 HRS | 0HRS | 0HRS
-Debugging | H | 10 HRS | 0 HRS | 0HRS
+Debugging | H | 10 HRS | 10+ HRS | 10+HRS
 Presentation Rehearsal | H | 4 HRS | 0HRS | 0HRS
-Total | H | 42 hrs | 5hrs | 6hrs+
+Total | H | 42 HRS | 52HRS | ~50HRS+
 
 Code Snippet
 ------------
-
-
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+const SpeechRecognition = window.webkitSpeechRecognition
+// This is a way to invoke the speech recognition fxn for chrome and edge due to webkit prefix
+//It was a bit more painstaking to simply intialize the variable than to write out the logic.
 Change Log
 ----------
 Use this section to document what changes were made and the reasoning behind those changes.
+I didn't really change anything significant compared to the original plan except the aesthetic details that was displayed in my wireframe.
+
+Most of the functionality is up and running although I will need to improve the following:
+
+* null logic for the voice recognition search feature (To exit without speaking) 
+ 
+* Incorporate CSS Flipbox Animations into the JS Logic
+
+* Separate the logic in the getBook() to drastically improve readibility
+
+* Properly align the search results in a way that aligns as rows  
+
+
