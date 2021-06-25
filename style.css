@@ -61,7 +61,7 @@ p{
   right: 118.427;
   color: rgba(255,255,255, 1);
   margin: auto;
-  font-size:xx-small;
+  font-size:xxx-small;
 }
 
 div.book{
@@ -190,5 +190,23 @@ width: 90%vw;
 input#blank{
   width:100%vw;
 }
+
+}
+
+/* CSS Library Section  */
+
+div.shelf{
+  display: flex;
+  flex-direction: column;
+  height: 25px;
+  margin: 16px 0px;
+  width: 75%;
+  background: rgb(150, 32, 32);
+}
+
+div.right.shelf{
+  position: absolute;
+  right: 0;
+  transform:rotate(90deg);
 
 }
