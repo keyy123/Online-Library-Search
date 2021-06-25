@@ -37,64 +37,119 @@ async function getBooks(input) {
 }
 
 /*Ask Gracen for help breaking these commands down into more readable functions to call */
-function makeBooks(bookData) {
-  
-  bookData.forEach(element => {
+/*We are going to use the make book function to make all of the search results into flipping cards  
+This is what we need to recreate for each element that passes through the forEach element array
+<!-- <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="#" alt="Book-Image" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div> -->
+*/
 
-   // Book Appending Features for text and innerText cintent
-    let newBook = document.createElement('div')
-    newBook.className = "book"
-    let bookContainer = document.createElement('div')
-    bookContainer.className = "modal"
-    bookContainer.setAttribute('id', 'myModal')
-    newBook.append(bookContainer)
+
+//function makeBooks(bookData) {
+  
+  //bookData.forEach(element => {
+
+    // Book Appending Features for text and innerText cintent
+    // let newBook = document.createElement('div')
+    // newBook.className = "book"
+    // let bookContainer = document.createElement('div')
+    // bookContainer.className = "modal"
+    // bookContainer.setAttribute('id', 'myModal')
+    // newBook.append(bookContainer)
     
     //create a span element for modal
-    let modalSpan = document.createElement('span')
-    modalSpan.className = "close"
+    // let modalSpan = document.createElement('span')
+    // modalSpan.className = "close"
     
 
     //Make and set book content 
+    // let bookContent = document.createElement('p')
+    // bookContent.className = "bookContent"
+    // bookContent.textContent = `Book Title:${element.title} Author: ${element.author_name} Publisher: ${element.publisher}`
+    // modalSpan.append(bookContent)
+
+    //Features to append button to books and add innerText to them
+    // let newBookBtn = document.createElement('button')
+    // newBookBtn.setAttribute('id', 'myBtn')
+    // newBookBtn.textContent = "details"
+    // newBook.append(newBookBtn)
+    // books.append(newBook)
+    
+    //Image Appending Features (can split into another function to improve aesthetic of code)
+    // let imgDiv = document.createElement('div')
+    // imgDiv.className = "modal-content"
+    // bookContainer.append(imgDiv)
+    // let newImg = document.createElement('img')
+    // newImg.className = "book image"
+    // newImg.setAttribute('src', 'https://1.bp.blogspot.com/-07BtMPlJimo/T2ugvQamV_I/AAAAAAAAKlA/YeBLJcJ5gQU/s1600/booktemplate-generic.png')
+    //imgDiv.append(newImg)
+    // newBook.append(newImg)
+    // imgDiv.append(modalSpan)
+  //});
+//   let btnArr = document.querySelectorAll('#myBtn')
+//   btnArr.forEach((btn, index) => {
+//     console.log(btn, index)
+//     btn.addEventListener('click', function () {
+//       if (document.querySelectorAll('.bookContent')[index].style.display === "none") {
+//         document.querySelectorAll('.bookContent')[index].style.display = "flex";
+//       } else {
+//         document.querySelectorAll('.bookContent')[index].style.display = "none";
+//       }
+
+//     })
+//})
+//}
+    
+function makeBooks(bookData) {
+  bookData.forEach(element => {
+    let flipCard = document.createElement('div')
+    flipCard.className = "flip-card"
+    books.append(flipCard)
+    let flipCardInner = document.createElement('div')
+    flipCardInner.className = "flip-card-inner"
+    flipCard.append(flipCardInner)
+    let flipCardFront = document.createElement('div')
+    flipCardFront.className = "flip-card-front"
+    flipCardInner.append(flipCardFront)
+    let flipCardBack = document.createElement('div')
+    flipCardBack.className = "flip-card-back"
+    flipCardInner.append(flipCardBack)
+    let newBook = document.createElement('div')
+    newBook.className = "book"
+    let bookContainer = document.createElement('div')
+    bookContainer.className = "bookContainer"
+    newBook.append(bookContainer)
+    flipCardFront.append(newBook)
     let bookContent = document.createElement('p')
     bookContent.className = "bookContent"
     bookContent.textContent = `Book Title:${element.title} Author: ${element.author_name} Publisher: ${element.publisher}`
-    modalSpan.append(bookContent)
-
-    //Features to append button to books and add innerText to them
-    let newBookBtn = document.createElement('button')
-    newBookBtn.setAttribute('id', 'myBtn')
-    newBookBtn.textContent = "details"
-    newBook.append(newBookBtn)
-    books.append(newBook)
-    
-    //Image Appending Features (can split into another function to improve aesthetic of code)
+    flipCardBack.append(bookContent)
     let imgDiv = document.createElement('div')
     imgDiv.className = "modal-content"
     bookContainer.append(imgDiv)
     let newImg = document.createElement('img')
     newImg.className = "book image"
     newImg.setAttribute('src', 'https://1.bp.blogspot.com/-07BtMPlJimo/T2ugvQamV_I/AAAAAAAAKlA/YeBLJcJ5gQU/s1600/booktemplate-generic.png')
-    //imgDiv.append(newImg)
-    newBook.append(newImg)
-    imgDiv.append(modalSpan)
-  });
-  let btnArr = document.querySelectorAll('#myBtn')
-  btnArr.forEach((btn, index) => {
-    console.log(btn, index)
-    btn.addEventListener('click', function () {
-      if (document.querySelectorAll('.bookContent')[index].style.display === "none") {
-        document.querySelectorAll('.bookContent')[index].style.display = "flex";
-      } else {
-        document.querySelectorAll('.bookContent')[index].style.display = "none";
-      }
-
-    })
-  })
+    flipCardFront.append(newImg)
+  });  
 }
-    
+
+
+
+
+
+
+
+
 //     .addEventListener('click', function () {
 //       document.querySelector('.bookContent')[0].style.display= "none";
-//   })
+//  })
 // }
 
 //Event Listeners 

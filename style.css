@@ -61,22 +61,32 @@ p.bookContent{
 /* display: flex;
 flex-flow: row wrap; */
 justify-content: space-around;
-left: 53px;
-right: auto;
-bottom: 0px;
 height: 150px;
 width: 132px;
 margin-left: 0px;
 margin-right: 0px;
 align-items: center;
-background-color: rgba(0,0,0,0.4);
+text-align: center;
+position: absolute;
+color: rgba(0,0,0, 1);
+margin: auto;
+justify-content: space-around;
+height: 150px;
+width: 132px;
+margin-left: 0px;
+margin-right: 0px;
+align-items: center;
+bottom: 0px;
+top: 200px;
+right: 28px;
+left: 85px;
 } 
 
 p{
   position: absolute;
   top: 0;
   right: 118.427;
-  color: rgba(255,255,255, 1);
+  color: rgba(0,0,0, 1);
   margin: auto;
   font-size:xxx-small;
 }
