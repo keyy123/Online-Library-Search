@@ -10,10 +10,11 @@ flex-wrap: wrap;
 align-content: center;
 background-image: url("https://th.bing.com/th/id/OIP.3th3kLGvdI3W6ffyVmyzhwHaCi?w=334&h=120&c=7&o=5&pid=1.7");
 background-size: cover;
+align-items: center;
 }
 
 h1{
-  
+  color: white;
   justify-content: center;
   height: 50px;
   order: 0;
@@ -34,7 +35,7 @@ div.search-area{
 
 
 h2{
-  
+  color: white;
   flex-direction: column;
   align-items: center;
   order:5;
@@ -101,7 +102,7 @@ div.search-area{
   flex-wrap: wrap;
   align-content: center;
   width: 500px;
-  height: 200px;
+  height: 50px;
   margin-right: auto;
   margin-left: auto;
   flex-direction: column;
