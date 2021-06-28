@@ -143,11 +143,14 @@ const SpeechRecognition = window.webkitSpeechRecognition
 Change Log
 ----------
 Use this section to document what changes were made and the reasoning behind those changes.
+
 I didn't really change anything significant compared to the original plan except the aesthetic details that was displayed in my wireframe.
 
 Most of the functionality is up and running although I will need to improve the following:
 
 * null logic for the voice recognition search feature (To exit without speaking) 
- 
 
+* Over the week, I would like to test adding another library API to my function  and limit it to 10 searchs results from the 2nd API. 
+
+* I would like to work on updating the aesthetics of the website - This has more to do with my sense of aesthetics than the code. 
 
