@@ -6,7 +6,8 @@ Project Overview
 
 Project Name: Online Library Search
 ------------
-https://git.generalassemb.ly/parktwins1/Online-Library-Search
+
+https://keyy123.github.io/Online-Library-Search/
 
 Project Description
 -------------------
@@ -129,14 +130,16 @@ Add CSS Mockup: Flexbox & Media Queries @ breakpoint | M | 5 HRS | 6HRS | 6HRS
 Add Voice Recognition | H | 5 HRS | 9HRS | 9HRs
 Add Animations | M | 5 HRS | 0HRS | 0HRS
 Debugging | H | 10 HRS | 10+ HRS | 10+HRS
-Presentation Rehearsal | H | 4 HRS | 0HRS | 0HRS
+Presentation Rehearsal | H | 4 HRS | 10MINS | 10MINS
 Total | H | 42 HRS | 52HRS | ~50HRS+
 
 Code Snippet
 ------------
 const SpeechRecognition = window.webkitSpeechRecognition
 // This is a way to invoke the speech recognition fxn for chrome and edge due to webkit prefix
+
 //It was a bit more painstaking to simply intialize the variable than to write out the logic.
+
 Change Log
 ----------
 Use this section to document what changes were made and the reasoning behind those changes.
@@ -146,10 +149,5 @@ Most of the functionality is up and running although I will need to improve the 
 
 * null logic for the voice recognition search feature (To exit without speaking) 
  
-* Incorporate CSS Flipbox Animations into the JS Logic
-
-* Separate the logic in the getBook() to drastically improve readibility
-
-* Properly align the search results in a way that aligns as rows  
 
 
