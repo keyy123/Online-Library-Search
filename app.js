@@ -27,7 +27,7 @@ text.addEventListener('click', storeText)
 
 async function getBooks(input) {
   try {
-    const response = await axios.get(`http://openlibrary.org/search.json?q=${input}`) 
+    const response = await axios.get(`https://openlibrary.org/search.json?q=${input}`) 
     let bookInfo = response.data.docs  
     makeBooks(bookInfo.slice(0, 6))
     console.log(bookInfo)
