@@ -4,7 +4,7 @@ const text = document.querySelector('#search')
 let h2 = document.querySelector('h2')
 const searchResults = []
 const books = document.querySelector('.book-list')
-const SpeechRecognition = window.webkitSpeechRecognition
+const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition
 
 function storeText() {
   let words = input.value
@@ -122,7 +122,6 @@ function makeBooks(bookData) {
     // let flipCardBack = document.createElement('div')
     // flipCardBack.className = "flip-card-back"
     // flipCardInner.append(flipCardBack)
-    makeFlipCards(element)
     // let newBook = document.createElement('div')
     // newBook.className = "book"
     // let bookContainer = document.createElement('div')
@@ -140,7 +139,7 @@ function makeBooks(bookData) {
     // newImg.className = "book image"
     // newImg.setAttribute('src', 'https://1.bp.blogspot.com/-07BtMPlJimo/T2ugvQamV_I/AAAAAAAAKlA/YeBLJcJ5gQU/s1600/booktemplate-generic.png')
     // flipCardFront.append(newImg)
-    
+    makeFlipCards(element)
   });  
 }
 
@@ -151,6 +150,7 @@ function makeFlipCards(element) {
     // let bookContainer = document.createElement('div')
     // bookContainer.className = "bookContainer"
     // newBook.append(bookContainer)
+  
     let newBooks = bookCover()
     
   //Flipcard creation
