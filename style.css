@@ -1,6 +1,4 @@
-*{
-
-}
+/* *{}*/
 
 body{
 display: flex;
@@ -238,16 +236,21 @@ button.voiceBtn{
   order: 1;
 }
 
-img.book.image{
-  width: 50%;
-}
+
 
 /*Media Query - Breakpoint:Galaxy Fold (280 x 653) */
 @media screen and (max-width:280px) {
 /*https://www.bing.com/videos/search?q=how+to+add+background+patterns+in+CSS&view=detail&mid=82112F7F3CE74A32A75782112F7F3CE74A32A757&FORM=VIRE*/
 /*code artist*/
+h1{
+  display:flex;
+  order: 0;
+}
+
+
 body{
 position: relative;
+display: flex;
 background-color: #1f344c;
 padding: 0;
 margin: 0; 
@@ -271,6 +274,8 @@ div.search-area{
   height: 400px;
   margin-right: auto;
   margin-left: auto; 
+  order: 1;
+
 }
  
 section.book-list{
@@ -287,7 +292,7 @@ p.bookContent{
 }
 
 footer{
-  position: sticky;
+  position: absolute;
   position: -webkit-sticky;
   font-size: small;
   width: 100%;
@@ -299,6 +304,12 @@ footer{
 input#blank{
   width:75%vw;
 }
+
+body h2{
+display:flex;
+order: 2;
+}
+
 
 }
 

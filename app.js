@@ -30,6 +30,7 @@ async function getBooks(input) {
     const response = await axios.get(`http://openlibrary.org/search.json?q=${input}`) 
     let bookInfo = response.data.docs  
     makeBooks(bookInfo.slice(0, 6))
+    console.log(bookInfo)
     //Source: Molly Exten - slack - sorting function 
   } catch (error) {
    console.error(error) 
@@ -48,7 +49,8 @@ This is what we need to recreate for each element that passes through the forEac
         </div>
       </div>
     </div> -->
-*/
+
+    */
 
 
 //function makeBooks(bookData) {
@@ -108,8 +110,52 @@ This is what we need to recreate for each element that passes through the forEac
     
 function makeBooks(bookData) {
   bookData.forEach(element => {
+    //let flipCard = document.createElement('div')
+    //flipCard.className = "flip-card"
+    //books.append(flipCard)
+    //let flipCardInner = document.createElement('div')
+    //flipCardInner.className = "flip-card-inner"
+    //flipCard.append(flipCardInner)
+    // let flipCardFront = document.createElement('div')
+    // flipCardFront.className = "flip-card-front"
+    // flipCardInner.append(flipCardFront)
+    // let flipCardBack = document.createElement('div')
+    // flipCardBack.className = "flip-card-back"
+    // flipCardInner.append(flipCardBack)
+    makeFlipCards(element)
+    // let newBook = document.createElement('div')
+    // newBook.className = "book"
+    // let bookContainer = document.createElement('div')
+    // bookContainer.className = "bookContainer"
+    // newBook.append(bookContainer)
+    // flipCardFront.append(newBook)
+    // let bookContent = document.createElement('p')
+    // bookContent.className = "bookContent"
+    // bookContent.textContent = `Book Title:${element.title} Author: ${element.author_name} Publisher: ${element.publisher}`
+    // flipCardBack.append(bookContent)
+    // let imgDiv = document.createElement('div')
+    // imgDiv.className = "modal-content"
+    // bookContainer.append(imgDiv)
+    // let newImg = document.createElement('img')
+    // newImg.className = "book image"
+    // newImg.setAttribute('src', 'https://1.bp.blogspot.com/-07BtMPlJimo/T2ugvQamV_I/AAAAAAAAKlA/YeBLJcJ5gQU/s1600/booktemplate-generic.png')
+    // flipCardFront.append(newImg)
+    
+  });  
+}
+
+function makeFlipCards(element) {
+  //New book container
+    // let newBook = document.createElement('div')
+    // newBook.className = "book"
+    // let bookContainer = document.createElement('div')
+    // bookContainer.className = "bookContainer"
+    // newBook.append(bookContainer)
+    let newBooks = bookCover()
+    
+  //Flipcard creation
     let flipCard = document.createElement('div')
-    flipCard.className = "flip-card"
+    flipCard.classList.add("flip-card") 
     books.append(flipCard)
     let flipCardInner = document.createElement('div')
     flipCardInner.className = "flip-card-inner"
@@ -120,31 +166,51 @@ function makeBooks(bookData) {
     let flipCardBack = document.createElement('div')
     flipCardBack.className = "flip-card-back"
     flipCardInner.append(flipCardBack)
-    let newBook = document.createElement('div')
-    newBook.className = "book"
-    let bookContainer = document.createElement('div')
-    bookContainer.className = "bookContainer"
-    newBook.append(bookContainer)
-    flipCardFront.append(newBook)
-    let bookContent = document.createElement('p')
-    bookContent.className = "bookContent"
-    bookContent.textContent = `Book Title:${element.title} Author: ${element.author_name} Publisher: ${element.publisher}`
-    flipCardBack.append(bookContent)
+    flipCardFront.append(newBooks)
+    //flipCardBack.append(bookContent)
+    let newImg = makeImgs()
+    flipCardFront.append(newImg)  
+    //   flipCardFront.append(newImg)
+  // flipCardFront.append(newBook)
+  
+  //book content creation 
+    // let bookContent = document.createElement('p')
+    // bookContent.className = "bookContent"
+    // bookContent.textContent = `Book Title:${element.title} Author: ${element.author_name} Publisher: ${element.publisher}`
+  let bookDetails = backOfBook(element)  
+  flipCardBack.append(bookDetails)
+}
+
+//Separating Fxn - Molly Exten Advice - 6/28/21
+
+
+function makeImgs() {
     let imgDiv = document.createElement('div')
     imgDiv.className = "modal-content"
-    bookContainer.append(imgDiv)
+    //bookContainer.append(imgDiv)
     let newImg = document.createElement('img')
     newImg.className = "book image"
     newImg.setAttribute('src', 'https://1.bp.blogspot.com/-07BtMPlJimo/T2ugvQamV_I/AAAAAAAAKlA/YeBLJcJ5gQU/s1600/booktemplate-generic.png')
-    flipCardFront.append(newImg)
-  });  
+    imgDiv.append(newImg)  
+    return imgDiv
 }
 
+function bookCover() {
+  let newBook = document.createElement('div')
+  newBook.className = "book"
+  let bookContainer = document.createElement('div')
+  bookContainer.className = "bookContainer"
+  newBook.append(bookContainer)
+  return newBook
+}
 
-
-
-
-
+function backOfBook(element) {
+  let bookContent = document.createElement('p')
+  bookContent.className = "bookContent"
+  bookContent.textContent = `Book Title:${element.title} Author: ${element.author_name} Publisher: ${element.publisher}`
+  console.log(bookContent.textContent)
+  return bookContent
+}
 
 
 //     .addEventListener('click', function () {
