@@ -41,8 +41,8 @@ flex: 5 5;
 
 .six{
   background: linear-gradient(0deg, #536976, #292E49);
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 
 .image{
@@ -57,7 +57,7 @@ border-radius: 10px 10px 10px 10px;
 }
 
 input[type='text']{
-  flex: 3 3;
+  flex: 3;
   border-radius: 10px 10px 10px 10px;
   background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
   color: white;
@@ -78,14 +78,14 @@ button.voiceBtn{
   color: red;
 }
 
-div.book.cover{
+/* div.book.cover{
   display: flex;
   flex-wrap: row wrap;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: flex-end;
   position: relative;
-}
+} */
 
 p.bookContent{
 
@@ -165,7 +165,7 @@ i.fas.fa-microphone{
    p.bookContent  {
     color:white;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(63,63,167,1) 35%, rgba(0,212,255,1) 100%);
-    
+    font-size: small;
     
   }
 
@@ -208,3 +208,7 @@ p.bookContent :hover{
   transform: rotateY(180deg);
 }
 
+section.book-list{
+display:flex;
+flex-wrap:wrap;
+}
